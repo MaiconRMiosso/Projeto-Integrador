@@ -1,5 +1,3 @@
-import 'dart:html';
-
 import 'package:flutter/material.dart';
 
 class home extends StatefulWidget {
@@ -29,7 +27,7 @@ class _homeState extends State<home> {
           ),
         ],
       ),
-      backgroundColor: Color(0xFFEFEFEF),
+      backgroundColor: Color(0xFFEFEFEF), //fundo principal
       body: SafeArea(
         child: GestureDetector(
           onTap: () => FocusScope.of(context).unfocus(),
@@ -48,6 +46,7 @@ class _homeState extends State<home> {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Padding(
+                            //titulo
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                             child: Text(
@@ -86,6 +85,7 @@ class _homeState extends State<home> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
+                    //subtitulo
                     padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
                     child: Text(
                       'Seu destino te aguarda ',
@@ -105,6 +105,7 @@ class _homeState extends State<home> {
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
+                        //linha do menu principal
                         mainAxisSize: MainAxisSize.max,
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
@@ -148,16 +149,16 @@ class _homeState extends State<home> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
                       padding: EdgeInsetsDirectional.fromSTEB(
-                          60, 0, 20, 0), //muda posição dos container
+                          50, 0, 0, 0), //muda posição dos container
                       child: Container(
-                        width: 200,
-                        height: 210,
+                        width: 150,
+                        height: 180,
                         decoration: BoxDecoration(
                           color: Color(0xFFEEF0F6),
                           borderRadius: BorderRadius.circular(20),
@@ -172,7 +173,8 @@ class _homeState extends State<home> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                               child: Container(
-                                width: 400,
+                                //container 1 (lado esquerdo)
+                                width: 200,
                                 height: 50,
                                 decoration: BoxDecoration(
                                   color: Color(0xFFEEF0F6),
@@ -192,7 +194,7 @@ class _homeState extends State<home> {
                                     ),
                                     Padding(
                                       padding: EdgeInsetsDirectional.fromSTEB(
-                                          17, 0, 0, 0),
+                                          0, 0, 0, 0),
                                       child: Column(
                                         mainAxisSize: MainAxisSize.max,
                                         children: [
@@ -210,6 +212,7 @@ class _homeState extends State<home> {
                               ),
                             ),
                             Padding(
+                              //lógica do swift, porém só pode ser integrado com back (firebase)
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 2, 0, 0),
                               /* child: SwitchListTile(
@@ -234,8 +237,9 @@ class _homeState extends State<home> {
                       ),
                     ),
                     Container(
-                      width: 220,
-                      height: 225,
+                      //lado direito
+                      width: 150,
+                      height: 180,
                       decoration: BoxDecoration(
                         color: Color(0xFFEEF0F6),
                         borderRadius: BorderRadius.circular(20),
@@ -256,8 +260,8 @@ class _homeState extends State<home> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(55, 0, 0, 0),
                                 child: Container(
-                                  width: 50,
-                                  height: 50,
+                                  width: 30,
+                                  height: 30,
                                   decoration:
                                       BoxDecoration(color: Color(0xFF8A82E2)),
                                 ),
@@ -281,8 +285,8 @@ class _homeState extends State<home> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(55, 0, 0, 0),
                                 child: Container(
-                                  width: 50,
-                                  height: 50,
+                                  width: 30,
+                                  height: 30,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF8A82E2),
                                   ),
@@ -307,8 +311,8 @@ class _homeState extends State<home> {
                                 padding:
                                     EdgeInsetsDirectional.fromSTEB(55, 0, 0, 0),
                                 child: Container(
-                                  width: 50,
-                                  height: 50,
+                                  width: 30,
+                                  height: 30,
                                   decoration: BoxDecoration(
                                     color: Color(0xFF8A82E2),
                                   ),
@@ -361,6 +365,7 @@ class _homeState extends State<home> {
                         ],
                       ),
                       Row(
+                        //box do final da página
                         mainAxisSize: MainAxisSize.max,
                         children: [
                           Padding(
