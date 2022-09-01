@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class HomeAluno extends StatefulWidget {
   const HomeAluno({Key? key}) : super(key: key);
@@ -11,19 +12,34 @@ class _HomeAlunoState extends State<HomeAluno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEEF0F6),
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('AppBar'),
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
+        title: Text(
+          'Nome do usuário',
+          style: TextStyle(
+            fontFamily: 'Poppins',
+            color: Color(0xFF707585),
+          ),
+        ),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.account_circle,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications),
+            color: Color(0xFF707585),
           ),
         ],
       ),
@@ -38,7 +54,7 @@ class _HomeAlunoState extends State<HomeAluno> {
                 children: [
                   //título ePort
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 50, 0, 0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -54,6 +70,7 @@ class _HomeAlunoState extends State<HomeAluno> {
                                 fontFamily: 'Poppins',
                                 color: Color(0xFF707585),
                                 fontSize: 36,
+                                fontWeight: FontWeight.w800,
                               ),
                             ),
                           ),
@@ -68,7 +85,7 @@ class _HomeAlunoState extends State<HomeAluno> {
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   color: Color(0xFF8A82E2),
-                                  fontSize: 36,
+                                  fontSize: 45,
                                   fontWeight: FontWeight.w800,
                                 ),
                               ),
@@ -85,11 +102,13 @@ class _HomeAlunoState extends State<HomeAluno> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                     child: Text(
                       'Seu destino te aguarda ',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        color: Color(0xFF707585),
+                        fontSize: 20,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
@@ -98,42 +117,55 @@ class _HomeAlunoState extends State<HomeAluno> {
               ),
               Padding(
                 //botões menu/ gps e o icon
-                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(40, 30, 0, 0),
                 child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
                   child: Row(
                     mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                FlatButton(
-                                  color: Colors.blue,
-                                  textColor: Colors.white,
-                                  child: Text("Menu"),
-                                  onPressed: () {},
-                                ),
-                                FlatButton(
-                                  color: Colors.blue,
-                                  textColor: Colors.white,
-                                  child: Text("GPS"),
-                                  onPressed: () {},
-                                ),
-                              ],
+                            Container(
+                              height: 55,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF8A82E2),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FlatButton(
+                                      textColor: Colors.white,
+                                      child: Text("Menu"),
+                                      onPressed: () {},
+                                      shape: new RoundedRectangleBorder(
+                                          borderRadius:
+                                              new BorderRadius.circular(30.0))),
+                                  FlatButton(
+                                    textColor: Colors.white,
+                                    child: Text("GPS"),
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
                             ),
                             Padding(
-                              //icon menu
                               padding:
-                                  EdgeInsetsDirectional.fromSTEB(50, 0, 0, 0),
-                              child: IconButton(
-                                onPressed: () {},
-                                icon: Icon(Icons.logout),
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                height: 55,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF8A82E2),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.fingerprint),
+                                  color: Colors.white,
+                                  iconSize: 40,
+                                ),
                               ),
                             ),
                           ],
@@ -148,38 +180,70 @@ class _HomeAlunoState extends State<HomeAluno> {
                 padding: EdgeInsetsDirectional.fromSTEB(0, 60, 120, 0),
                 child: Container(
                   width: 150,
-                  height: 200,
-                  decoration: BoxDecoration(),
+                  height: 180,
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
                       Divider(),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 70, 0, 0),
-                        child: FlatButton(
-                          color: Colors.blue,
-                          textColor: Colors.white,
-                          child: Text("Vou"),
-                          onPressed: () {},
-                        ),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                        child: ElevatedButton(
+                            child: Text(
+                              "VOU",
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  color: Color(0xFF8A82E2),
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Color(0xFFEEF0F6),
+                              ),
+                              minimumSize:
+                                  MaterialStateProperty.all(Size(120, 50)),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: BorderSide(color: Color(0xFF8A82E2))),
+                              ),
+                            )),
                       ),
-                      FlatButton(
-                        color: Colors.blue,
-                        textColor: Colors.white,
-                        child: Text("Volto"),
-                        onPressed: () {},
-                      )
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                        child: ElevatedButton(
+                            child: Text(
+                              "VOLTO",
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  color: Color(0xFF8A82E2),
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              backgroundColor: MaterialStateProperty.all(
+                                Color(0xFFEEF0F6),
+                              ),
+                              minimumSize:
+                                  MaterialStateProperty.all(Size(120, 50)),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: BorderSide(color: Color(0xFF8A82E2))),
+                              ),
+                            )),
+                      ),
                     ],
                   ),
                 ),
               ),
               Padding(
                 //box fo dia e data de "hj"
-                padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
                 child: Container(
                   width: 300,
                   height: 130,
-                  decoration: BoxDecoration(),
+                  decoration: BoxDecoration(color: Colors.red),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [

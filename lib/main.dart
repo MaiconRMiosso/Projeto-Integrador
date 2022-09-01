@@ -8,8 +8,7 @@ import 'cadastroTransporte.dart';
 
 void main() {
   runApp(MaterialApp(
-    home:
-        LocalizacaoAluno(), //trocar aqui conforme os componentes que querem usar
+    home: HomeAluno(), //trocar aqui conforme os componentes que querem usar
     debugShowCheckedModeBanner: false,
   ));
 }
