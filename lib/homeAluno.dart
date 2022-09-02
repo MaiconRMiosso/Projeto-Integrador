@@ -131,7 +131,24 @@ class _HomeAlunoState extends State<HomeAluno> {
                               height: 55,
                               decoration: BoxDecoration(
                                 color: Color(0xFF8A82E2),
-                                borderRadius: BorderRadius.circular(20),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 40,
+                                    color: Color(0xffcaccd1),
+                                    offset: Offset(15, 15),
+                                  ),
+                                  BoxShadow(
+                                    blurRadius: 40,
+                                    color: Color(0xffffffff),
+                                    offset: Offset(-10, -10),
+                                  ),
+                                ],
+                                gradient: null,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    20,
+                                  ),
+                                ),
                               ),
                               child: Row(
                                 mainAxisSize: MainAxisSize.max,
@@ -177,21 +194,42 @@ class _HomeAlunoState extends State<HomeAluno> {
               ),
               Padding(
                 //box que está os botões de vou e volto
-                padding: EdgeInsetsDirectional.fromSTEB(0, 60, 120, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 140, 0),
                 child: Container(
-                  width: 150,
-                  height: 180,
+                  width: 170,
+                  height: 200,
+                  decoration: BoxDecoration(
+                    color: Color(0xffeef0f6),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 20,
+                        color: Color(0xffcaccd1),
+                        offset: Offset(10, 10),
+                      ),
+                      BoxShadow(
+                        blurRadius: 20,
+                        color: Color(0xffffffff),
+                        offset: Offset(-10, -10),
+                      ),
+                    ],
+                    gradient: null,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        15,
+                      ),
+                    ),
+                  ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
-                      Divider(),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 30, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
                         child: ElevatedButton(
                             child: Text(
                               "VOU",
                               style: TextStyle(
                                   fontSize: 22,
+                                  fontFamily: 'Poppins',
                                   color: Color(0xFF8A82E2),
                                   fontWeight: FontWeight.w500),
                             ),
@@ -210,12 +248,13 @@ class _HomeAlunoState extends State<HomeAluno> {
                             )),
                       ),
                       Padding(
-                        padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                         child: ElevatedButton(
                             child: Text(
                               "VOLTO",
                               style: TextStyle(
                                   fontSize: 22,
+                                  fontFamily: 'Poppins',
                                   color: Color(0xFF8A82E2),
                                   fontWeight: FontWeight.w500),
                             ),
@@ -239,11 +278,37 @@ class _HomeAlunoState extends State<HomeAluno> {
               ),
               Padding(
                 //box fo dia e data de "hj"
-                padding: EdgeInsetsDirectional.fromSTEB(0, 5, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 20, 0, 0),
                 child: Container(
                   width: 300,
                   height: 130,
-                  decoration: BoxDecoration(color: Colors.red),
+                  decoration: BoxDecoration(
+                    color: Color(0xffeef0f6),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffcaccd1),
+                        offset: Offset(
+                          22,
+                          22,
+                        ),
+                      ),
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffffffff),
+                        offset: Offset(
+                          -22,
+                          -22,
+                        ),
+                      ),
+                    ],
+                    gradient: null,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        15,
+                      ),
+                    ),
+                  ),
                   child: Column(
                     mainAxisSize: MainAxisSize.max,
                     children: [
