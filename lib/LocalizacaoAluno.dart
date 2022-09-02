@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LocalizacaoAluno extends StatefulWidget {
   const LocalizacaoAluno({Key? key}) : super(key: key);
@@ -11,19 +12,27 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Color(0xFFEEF0F6),
       appBar: AppBar(
-        centerTitle: true,
-        title: Text('AppBar'),
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_circle_left,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications),
+            color: Color(0xFF707585),
           ),
         ],
       ),
@@ -36,9 +45,9 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
+                  //título ePort
                   Padding(
-                    //titulo
-                    padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(20, 50, 0, 0),
                     child: SingleChildScrollView(
                       scrollDirection: Axis.horizontal,
                       child: Row(
@@ -53,7 +62,8 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                               style: TextStyle(
                                 fontFamily: 'Poppins',
                                 color: Color(0xFF707585),
-                                fontSize: 36,
+                                fontSize: 45,
+                                fontWeight: FontWeight.w800,
                               ),
                             ),
                           ),
@@ -68,7 +78,7 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                                 style: TextStyle(
                                   fontFamily: 'Poppins',
                                   color: Color(0xFF8A82E2),
-                                  fontSize: 36,
+                                  fontSize: 45,
                                   fontWeight: FontWeight.w800,
                                 ),
                               ),
@@ -81,15 +91,17 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                 ],
               ),
               Row(
-                //subtitulo
+                //subtítulo
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                     child: Text(
-                      'Não se perca',
+                      'Não se perca ',
                       style: TextStyle(
                         fontFamily: 'Poppins',
+                        color: Color(0xFF707585),
+                        fontSize: 20,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
@@ -97,36 +109,42 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                 ],
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 30, 200, 0),
+                //botões menu/ gps e o icon
+                padding: EdgeInsetsDirectional.fromSTEB(40, 30, 0, 0),
                 child: SingleChildScrollView(
-                  scrollDirection: Axis.horizontal,
                   child: Row(
-                    //botoes menu
                     mainAxisSize: MainAxisSize.max,
-                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
                         child: Row(
                           mainAxisSize: MainAxisSize.max,
                           children: [
-                            Row(
-                              mainAxisSize: MainAxisSize.max,
-                              children: [
-                                FlatButton(
-                                  color: Colors.blue,
-                                  textColor: Colors.white,
-                                  child: Text("Menu"),
-                                  onPressed: () {},
-                                ),
-                                FlatButton(
-                                  color: Colors.blue,
-                                  textColor: Colors.white,
-                                  child: Text("GPS"),
-                                  onPressed: () {},
-                                ),
-                              ],
+                            Container(
+                              height: 55,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF8A82E2),
+                                borderRadius: BorderRadius.circular(20),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FlatButton(
+                                      textColor: Colors.white,
+                                      child: Text("Menu"),
+                                      onPressed: () {},
+                                      shape: new RoundedRectangleBorder(
+                                          borderRadius:
+                                              new BorderRadius.circular(30.0))),
+                                  FlatButton(
+                                    textColor: Colors.white,
+                                    child: Text("GPS"),
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
                             ),
+                            
                           ],
                         ),
                       ),
@@ -135,15 +153,39 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                 ),
               ),
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 80, 0, 0),
+                padding: EdgeInsetsDirectional.fromSTEB(0, 50, 0, 0),
                 child: Container(
                   // container para a localização
-                  width: 250,
+                  width: 300,
                   height: 250,
-                  decoration: BoxDecoration(),
-                  child: Text(
-                    'Localização',
+                  decoration: BoxDecoration(
+                    color: Color(0xffeef0f6),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffcaccd1),
+                        offset: Offset(
+                          22,
+                          22,
+                        ),
+                      ),
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffffffff),
+                        offset: Offset(
+                          -22,
+                          -22,
+                        ),
+                      ),
+                    ],
+                    gradient: null,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        15,
+                      ),
+                    ),
                   ),
+                  
                 ),
               ),
             ],
