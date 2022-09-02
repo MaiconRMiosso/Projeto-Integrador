@@ -144,7 +144,6 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                                 ],
                               ),
                             ),
-                            
                           ],
                         ),
                       ),
@@ -185,7 +184,6 @@ class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
                       ),
                     ),
                   ),
-                  
                 ),
               ),
             ],
