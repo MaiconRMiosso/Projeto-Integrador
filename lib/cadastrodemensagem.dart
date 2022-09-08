@@ -24,19 +24,21 @@ class _cadastrodemensagensState extends State<cadastrodemensagens> {
   Widget build(BuildContext context) {
     return Scaffold(
       key: scaffoldKey,
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text('AppBar'),
+       appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_circle_left,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
           ),
         ],
       ),
@@ -105,7 +107,7 @@ class _cadastrodemensagensState extends State<cadastrodemensagens> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 400, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(0, 0, 0, 0),
                       child: Text(
                         'de mensagens',
                         style: TextStyle(
@@ -117,37 +119,82 @@ class _cadastrodemensagensState extends State<cadastrodemensagens> {
                       ),
                     ),
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(80, 30, 0, 0),
-                      child: Row(
-                        mainAxisSize: MainAxisSize.max,
-                        children: [
-                          FlatButton(
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Menu"),
-                            onPressed: () {},
-                          ),
-                          FlatButton(
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Alunos"),
-                            onPressed: () {},
-                          ),
-                          FlatButton(
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Transporte"),
-                            onPressed: () {},
-                          ),
-                          FlatButton(
-                            color: Colors.blue,
-                            textColor: Colors.white,
-                            child: Text("Avisos"),
-                            onPressed: () {},
-                          ),
-                        ],
+                //botões menu/ gps e o icon
+                padding: EdgeInsetsDirectional.fromSTEB(40, 30, 0, 0),
+                child: SingleChildScrollView(
+                  child: Row(
+                    mainAxisSize: MainAxisSize.max,
+                    children: [
+                      Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 45, 0, 0),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.max,
+                          children: [
+                            Container(
+                              height: 55,
+                              decoration: BoxDecoration(
+                                color: Color(0xFF8A82E2),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 40,
+                                    color: Color(0xffcaccd1),
+                                    offset: Offset(15, 15),
+                                  ),
+                                  BoxShadow(
+                                    blurRadius: 40,
+                                    color: Color(0xffffffff),
+                                    offset: Offset(-10, -10),
+                                  ),
+                                ],
+                                gradient: null,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    20,
+                                  ),
+                                ),
+                              ),
+                              child: Row(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  FlatButton(
+                                      textColor: Colors.white,
+                                      child: Text("Menu"),
+                                      onPressed: () {},
+                                      shape: new RoundedRectangleBorder(
+                                          borderRadius:
+                                              new BorderRadius.circular(30.0))),
+                                  FlatButton(
+                                    textColor: Colors.white,
+                                    child: Text("GPS"),
+                                    onPressed: () {},
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Padding(
+                              padding:
+                                  EdgeInsetsDirectional.fromSTEB(10, 0, 0, 0),
+                              child: Container(
+                                height: 55,
+                                decoration: BoxDecoration(
+                                  color: Color(0xFF8A82E2),
+                                  borderRadius: BorderRadius.circular(20),
+                                ),
+                                child: IconButton(
+                                  onPressed: () {},
+                                  icon: Icon(Icons.fingerprint),
+                                  color: Colors.white,
+                                  iconSize: 40,
+                                ),
+                              ),
+                            ),
+                          ],
+                        ),
                       ),
-                    ),
+                    ],
+                  ),
+                ),
+              ),
                     Padding(
                       // imput do titulo
                       padding: EdgeInsetsDirectional.fromSTEB(20, 50, 20, 0),
