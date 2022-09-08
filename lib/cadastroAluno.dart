@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePageWidget extends StatefulWidget {
-  const HomePageWidget({Key? key}) : super(key: key);
+class cadastroAluno extends StatefulWidget {
+  const cadastroAluno({Key? key}) : super(key: key);
 
   @override
-  _HomePageWidgetState createState() => _HomePageWidgetState();
+   State<cadastroAluno> createState() => _cadastroAlunoState();
 }
 
-class _HomePageWidgetState extends State<HomePageWidget> {
+class _cadastroAlunoState extends State<cadastroAluno> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
