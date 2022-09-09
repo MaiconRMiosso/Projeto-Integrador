@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
+import 'package:oi/listaAluno.dart';
 
 class HomeMotorista extends StatefulWidget {
   const HomeMotorista({Key? key}) : super(key: key);
@@ -12,6 +13,11 @@ class HomeMotorista extends StatefulWidget {
 
 class _HomeMotorista extends State<HomeMotorista> {
   bool isSwitched = false;
+
+  void _listaAluno() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -198,7 +204,7 @@ class _HomeMotorista extends State<HomeMotorista> {
                                                 color: Colors.white,
                                                 fontWeight: FontWeight.w300),
                                           ),
-                                          onPressed: null,
+                                          onPressed: () {_listaAluno;},
                                           style: ButtonStyle(
                                             elevation:
                                                 MaterialStateProperty.all(0),
