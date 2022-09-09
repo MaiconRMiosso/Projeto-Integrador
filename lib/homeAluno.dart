@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
 
 class HomeAluno extends StatefulWidget {
   const HomeAluno({Key? key}) : super(key: key);
@@ -104,7 +105,7 @@ class _HomeAlunoState extends State<HomeAluno> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(40, 0, 0, 0),
                     child: Text(
-                      'Seu destino te aguarda ',
+                      'seu destino te aguarda aluno',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         color: Color(0xFF707585),
