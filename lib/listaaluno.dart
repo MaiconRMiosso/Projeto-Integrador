@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class listaaluno extends StatefulWidget {
-  const listaaluno({Key? key}) : super(key: key);
+class listaAluno extends StatefulWidget {
+  const listaAluno({Key? key}) : super(key: key);
 
   @override
-  State<listaaluno> createState() => _listaalunoState();
+  State<listaAluno> createState() => _listaAlunoState();
 }
 
-class _listaalunoState extends State<listaaluno> {
+class _listaAlunoState extends State<listaAluno> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
