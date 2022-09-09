@@ -1,33 +1,37 @@
 
 import 'package:flutter/material.dart';
 
-class NotificacaoAuno extends StatefulWidget {
-  const NotificacaoAuno({Key? key}) : super(key: key);
+class NotificacaoAluno extends StatefulWidget {
+  const NotificacaoAluno({Key? key}) : super(key: key);
 
   @override
-  State<NotificacaoAuno> createState() => _NotificacaoAunoState();
+  State<NotificacaoAluno> createState() => _NotificacaoAunoState();
 }
 
-class _NotificacaoAunoState extends State<NotificacaoAuno> {
+class _NotificacaoAunoState extends State<NotificacaoAluno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_circle_left,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
           ),
           IconButton(
             onPressed: () {},
-            icon: Icon(Icons.logout),
+            icon: Icon(Icons.notifications),
+            color: Color(0xFF707585),
           ),
         ],
       ),
@@ -50,7 +54,7 @@ class _NotificacaoAunoState extends State<NotificacaoAuno> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                             child: Text(
                               'N',
                               style: TextStyle(
@@ -87,7 +91,7 @@ class _NotificacaoAunoState extends State<NotificacaoAuno> {
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                     child: Text(
                       'fique ligado',
                       style: TextStyle(
@@ -98,44 +102,86 @@ class _NotificacaoAunoState extends State<NotificacaoAuno> {
                   ),
                 ],
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(30, 50, 0, 0),
-                child: Row(
-                  mainAxisSize: MainAxisSize.max,
-                  children: [
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        Container(
-                          width: 300,
-                          height: 50,
-                          decoration: BoxDecoration(
-                            color: Colors.green
-                          ),
-                          child: Padding(
-                            padding:
-                                EdgeInsetsDirectional.fromSTEB(10, 15, 0, 0),
-                            child: Text(
-                              'Texto da outra tela',  
-                            ),
-                          ),
+              Row(
+                mainAxisSize: MainAxisSize.max,
+                children: [
+             Padding(
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 80, 0, 0),
+                    child: Container(
+                      width: 300,
+                      height: 55,
+                      decoration: BoxDecoration(
+                    color: Color(0xffeef0f6),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffcaccd1),
+                        offset: Offset(
+                          22,
+                          22,
                         ),
-                      ],
+                      ),
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffffffff),
+                        offset: Offset(
+                          -22,
+                          -22,
+                        ),
+                      ),
+                    ],
+                    gradient: null,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        15,
+                      ),
                     ),
-                  ],
-                ),
+                  ),
+                      child: Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
+                        child: Text(
+                          'Mudança de veículo',
+                        ),
+                      ),
+                      ),
+                     ),
+                ],
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(30, 80, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 30, 0, 0),
                     child: Container(
                       width: 300,
                       height: 250,
                       decoration: BoxDecoration(
-                        color: Colors.green,
+                    color: Color(0xffeef0f6),
+                    boxShadow: [
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffcaccd1),
+                        offset: Offset(
+                          22,
+                          22,
+                        ),
                       ),
+                      BoxShadow(
+                        blurRadius: 50,
+                        color: Color(0xffffffff),
+                        offset: Offset(
+                          -22,
+                          -22,
+                        ),
+                      ),
+                    ],
+                    gradient: null,
+                    borderRadius: BorderRadius.all(
+                      Radius.circular(
+                        15,
+                      ),
+                    ),
+                  ),
                       child: Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(20, 20, 20, 20),
                         child: Text(
