@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class ListaNotificacaoAluno extends StatefulWidget {
-  const ListaNotificacaoAluno({Key? key}) : super(key: key);
+class listaNotificacaoAluno extends StatefulWidget {
+  const listaNotificacaoAluno({Key? key}) : super(key: key);
 
   @override
-  State<ListaNotificacaoAluno> createState() => _ListaNotificacaoAlunoState();
+  State<listaNotificacaoAluno> createState() => _listaNotificacaoAlunoState();
 }
 
-class _ListaNotificacaoAlunoState extends State<ListaNotificacaoAluno> {
+class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
