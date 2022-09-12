@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
+import 'package:oi/login.dart';
 
 class HomeAluno extends StatefulWidget {
   const HomeAluno({Key? key}) : super(key: key);
@@ -10,6 +11,13 @@ class HomeAluno extends StatefulWidget {
 }
 
 class _HomeAlunoState extends State<HomeAluno> {
+  
+  void _voltaLogin() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> login()));
+}
+
+  
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +41,7 @@ class _HomeAlunoState extends State<HomeAluno> {
         ),
         actions: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {_voltaLogin;},
             icon: Icon(Icons.logout),
             color: Color(0xFF707585),
           ),

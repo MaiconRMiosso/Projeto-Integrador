@@ -3,6 +3,8 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:oi/listaAluno.dart';
+
 
 class HomeMotorista extends StatefulWidget {
   const HomeMotorista({Key? key}) : super(key: key);
@@ -13,6 +15,11 @@ class HomeMotorista extends StatefulWidget {
 
 class _HomeMotorista extends State<HomeMotorista> {
   bool isSwitched = false;
+
+  void _listaAluno() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));
+}
+
 
   @override
   Widget build(BuildContext context) {
@@ -427,6 +434,7 @@ class _HomeMotorista extends State<HomeMotorista> {
                                               borderRadius:
                                                   BorderRadius.circular(20),
                                             ),
+
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: Icon(Icons.rotate_left),

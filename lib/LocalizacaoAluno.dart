@@ -1,14 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LocalizacaoAluno extends StatefulWidget {
-  const LocalizacaoAluno({Key? key}) : super(key: key);
+class localizacaoAluno extends StatefulWidget {
+  const localizacaoAluno.dart({Key? key}) : super(key: key);
 
   @override
-  State<LocalizacaoAluno> createState() => _LocalizacaoAlunoState();
+  State<localizacaoAluno> createState() => _localizacaoAlunoState();
 }
 
-class _LocalizacaoAlunoState extends State<LocalizacaoAluno> {
+class _localizacaoAlunoState extends State<localizacaoAluno> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
