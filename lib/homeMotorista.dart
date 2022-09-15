@@ -4,7 +4,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:oi/listaAluno.dart';
-import 'package:oi/listaEmbarques.dart';
+import 'package:oi/listaEmbarque.dart';
 
 class homeMotorista extends StatefulWidget {
   const homeMotorista({Key? key}) : super(key: key);
@@ -20,7 +20,7 @@ class _homeMotorista extends State<homeMotorista> {
   Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));}
 
   void _listaEmbarques() {
-  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaEmbarques()));
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaEmbarque()));
 }
 
   @override
