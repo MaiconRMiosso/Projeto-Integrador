@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class cadastrodemensagens extends StatefulWidget {
-  const cadastrodemensagens({Key? key}) : super(key: key);
+class cadastroDeMensagem extends StatefulWidget {
+  const cadastroDeMensagem({Key? key}) : super(key: key);
 
   @override
-  State<cadastrodemensagens> createState() => _cadastrodemensagensState();
+  State<cadastroDeMensagem> createState() => _cadastroDeMensagemState();
 }
 
-class _cadastrodemensagensState extends State<cadastrodemensagens> {
+class _cadastroDeMensagemState extends State<cadastroDeMensagem> {
   TextEditingController? textController1;
   TextEditingController? textController2;
 

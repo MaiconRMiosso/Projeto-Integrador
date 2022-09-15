@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:oi/homeAluno.dart';
+import 'package:oi/homeMotorista.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -19,6 +21,18 @@ class _loginState extends State<login> {
     textController1 = TextEditingController();
     textController2 = TextEditingController();
   }
+
+
+  void _abrirHomeAluno() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> HomeAluno()));
+}
+
+  void _abrirHomeMotorista() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> HomeMotorista()));
+}
+
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -161,7 +175,7 @@ class _loginState extends State<login> {
                       color: Colors.blue,
                       textColor: Colors.white,
                       child: Text("Salvar"),
-                      onPressed: () {},
+                      onPressed: () {_abrirHomeMotorista();},
                     ),
                   ),
                 ],
@@ -173,3 +187,4 @@ class _loginState extends State<login> {
     );
   }
 }
+
