@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:oi/homeAluno.dart';
 import 'package:oi/homeMotorista.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -39,22 +40,139 @@ class _loginState extends State<login> {
       key: scaffoldKey,
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
-            mainAxisSize: MainAxisSize.max,
-            children: [
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Stack(children: <Widget>[
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(100, 0, 0, 200),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 110,
+                                width: 110,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                            Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(35, 0, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 310,
+                                width: 110,
+                                color: Colors.transparent,
+                              ),
+                            ))
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(15, 10, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 310,
+                                width: 110,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                            Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(30, 290, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 110,
+                                width: 110,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+              Container(
+                child: Column(
+                  mainAxisSize: MainAxisSize.max,
+                  children: [
               Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(0, 200, 0, 0),
+                            //box que está os botões de limpar e localização
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(25, 150, 0, 0),
+                            child: Container(
+                              width: 340,
+                              height: 400,
+                              decoration: BoxDecoration(
+                                color: Color(0xffeef0f6),
+                                boxShadow: [
+                                  BoxShadow(
+                                    blurRadius: 15,
+                                    color: Color(0xffcaccd1),
+                                    offset: Offset(
+                                      5,
+                                      5,
+                                    ),
+                                  ),
+                                  BoxShadow(
+                                    blurRadius: 15,
+                                    color: Color(0xffffffff),
+                                    offset: Offset(
+                                      -5,
+                                      -5,
+                                    ),
+                                  ),
+                                ],
+                                gradient: null,
+                                borderRadius: BorderRadius.all(
+                                  Radius.circular(
+                                    15,
+                                  ),
+                                ),
+                              ),
+                              child: Column(
+                                mainAxisSize: MainAxisSize.max,
+                                children: [
+                                  Padding(
+                                    padding: EdgeInsetsDirectional.fromSTEB(
+                                        6, 35, 0, 0),
+                                    child: Row(
+                                      mainAxisSize: MainAxisSize.max,
+                                      children: [
+
+
+                                        Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(0, 00, 0, 0),
                 child: Row(
                   mainAxisSize: MainAxisSize.max,
                   children: [
                     Padding(
-                      padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
+                      padding: EdgeInsetsDirectional.fromSTEB(70, 0, 0, 0),
                       child: Text(
                         'e',
                         style: TextStyle(
                           fontFamily: 'Poppins',
-                          fontSize: 36,
+                          fontSize: 64,
                         ),
                       ),
                     ),
@@ -63,31 +181,19 @@ class _loginState extends State<login> {
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         color: Color(0xFF8A82E2),
-                        fontSize: 36,
+                        fontSize: 64,
                       ),
                     ),
                   ],
                 ),
               ),
-              Row(
-                mainAxisSize: MainAxisSize.max,
-                children: [
-                  Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
-                    child: Text(
-                      'seu destino te aguarda',
-                      style: TextStyle(
-                        fontFamily: 'Poppins',
-                        color: Color(0xFFB9BECC),
-                        fontSize: 17,
-                        fontWeight: FontWeight.w300,
-                      ),
-                    ),
-                  ),
-                ],
-              ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 140, 20, 0),
+             
+                                      ],
+                                    ),
+                                  ),
+
+                                  Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 30, 20, 0),
                 child: TextFormField(
                   controller: textController1,
                   autofocus: true,
@@ -97,7 +203,6 @@ class _loginState extends State<login> {
                     enabledBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color(0x22000000),
-                        width: 1,
                       ),
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(4.0),
@@ -107,7 +212,6 @@ class _loginState extends State<login> {
                     focusedBorder: OutlineInputBorder(
                       borderSide: BorderSide(
                         color: Color(0x22000000),
-                        width: 1,
                       ),
                       borderRadius: const BorderRadius.only(
                         topLeft: Radius.circular(4.0),
@@ -118,8 +222,8 @@ class _loginState extends State<login> {
                   ),
                 ),
               ),
-              Padding(
-                padding: EdgeInsetsDirectional.fromSTEB(20, 15, 20, 0),
+ Padding(
+                padding: EdgeInsetsDirectional.fromSTEB(20, 35, 20, 0),
                 child: TextFormField(
                   controller: textController2,
                   autofocus: true,
@@ -159,7 +263,8 @@ class _loginState extends State<login> {
                       'confirme o cadastro com seu motorista',
                       style: TextStyle(
                         fontFamily: 'Poppins',
-                        fontSize: 10,
+                        color: Color(0xFF707585),
+                        fontSize: 14,
                         fontWeight: FontWeight.w300,
                       ),
                     ),
@@ -168,23 +273,48 @@ class _loginState extends State<login> {
               ),
               Row(
                 mainAxisSize: MainAxisSize.max,
+              
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 15, 0, 0),
-                    child: FlatButton(
-                      color: Colors.blue,
-                      textColor: Colors.white,
-                      child: Text("Salvar"),
-                      onPressed: () {_abrirHomeMotorista();},
-                    ),
-                  ),
+                        padding: EdgeInsetsDirectional.fromSTEB(120, 35, 0, 0),
+                        child: ElevatedButton(
+                          
+
+                            child: Text(
+                              "Entrar",
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white ,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              
+                              backgroundColor: MaterialStateProperty.all(
+                                Color(0xFF8A82E2),
+                              ),
+                              minimumSize:
+                                  MaterialStateProperty.all(Size(120, 50)),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: BorderSide(color: Color(0xFF8A82E2))),
+                              ),
+                            )),
+                      ),
                 ],
               ),
+                                ],
+                              ),
+                            ),
+                          ),
             ],
           ),
         ),
+      ],
       ),
-    );
+    ),),);
   }
 }
 
