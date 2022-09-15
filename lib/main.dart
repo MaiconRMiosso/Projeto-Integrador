@@ -17,7 +17,7 @@ import 'package:oi/login.dart';
 void main() {
   runApp(MaterialApp(
 
-    home: login(), //trocar aqui conforme os componentes que querem usar
+    home: notificacaoAluno(), //trocar aqui conforme os componentes que querem usar
 
     debugShowCheckedModeBanner: false,
   ));
