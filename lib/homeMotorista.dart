@@ -4,22 +4,24 @@ import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:oi/listaAluno.dart';
+import 'package:oi/listaEmbarque.dart';
 
-
-class HomeMotorista extends StatefulWidget {
-  const HomeMotorista({Key? key}) : super(key: key);
+class homeMotorista extends StatefulWidget {
+  const homeMotorista({Key? key}) : super(key: key);
 
   @override
-  State<HomeMotorista> createState() => _HomeMotorista();
+  State<homeMotorista> createState() => _homeMotorista();
 }
 
-class _HomeMotorista extends State<HomeMotorista> {
+class _homeMotorista extends State<homeMotorista> {
   bool isSwitched = false;
 
   void _listaAluno() {
-  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));
-}
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));}
 
+  void _listaEmbarques() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaEmbarque()));
+}
 
   @override
   Widget build(BuildContext context) {
@@ -251,7 +253,7 @@ class _HomeMotorista extends State<HomeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {_listaEmbarques;},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(
@@ -283,7 +285,7 @@ class _HomeMotorista extends State<HomeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {print("Apertei"); Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(

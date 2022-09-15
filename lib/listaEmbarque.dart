@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class listaEmbarques extends StatefulWidget {
-  const listaEmbarques({Key? key}) : super(key: key);
+class listaEmbarque extends StatefulWidget {
+  const listaEmbarque({Key? key}) : super(key: key);
 
   @override
-  State<listaEmbarques> createState() => _listaEmbarquesState();
+  State<listaEmbarque> createState() => _listaEmbarqueState();
 }
 
-class _listaEmbarquesState extends State<listaEmbarques> {
+class _listaEmbarqueState extends State<listaEmbarque> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
