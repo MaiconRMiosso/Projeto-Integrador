@@ -25,12 +25,12 @@ class _loginState extends State<login> {
 
   void _abrirHomeAluno() {
   Navigator.push(
-    context, MaterialPageRoute(builder: (context)=> HomeAluno()));
+    context, MaterialPageRoute(builder: (context)=> homeAluno()));
 }
 
   void _abrirHomeMotorista() {
   Navigator.push(
-    context, MaterialPageRoute(builder: (context)=> HomeMotorista()));
+    context, MaterialPageRoute(builder: (context)=> homeMotorista()));
 }
 
 

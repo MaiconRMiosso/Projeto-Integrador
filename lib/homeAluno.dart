@@ -3,14 +3,14 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:oi/login.dart';
 
-class HomeAluno extends StatefulWidget {
-  const HomeAluno({Key? key}) : super(key: key);
+class homeAluno extends StatefulWidget {
+  const homeAluno({Key? key}) : super(key: key);
 
   @override
-  State<HomeAluno> createState() => _HomeAlunoState();
+  State<homeAluno> createState() => _homeAlunoState();
 }
 
-class _HomeAlunoState extends State<HomeAluno> {
+class _homeAlunoState extends State<homeAluno> {
   
   void _voltaLogin() {
   Navigator.push(
