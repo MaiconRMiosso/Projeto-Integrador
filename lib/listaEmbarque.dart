@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class listaEmbarque extends StatefulWidget {
   const listaEmbarque({Key? key}) : super(key: key);
@@ -28,27 +29,56 @@ class _listaEmbarqueState extends State<listaEmbarque> {
   }
 
   @override
-  Widget build(BuildContext context) {
+    Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_circle_left,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
           ),
         ],
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Stack(children: <Widget>[
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        
+                            Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(200, 450, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 170,
+                                width: 170,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+          Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Row(
@@ -64,14 +94,14 @@ class _listaEmbarqueState extends State<listaEmbarque> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                             child: Text(
                               'E',
                               style: TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Color(0xFF707585),
-                                fontSize: 36,
-                              ),
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFF707585),
+                                    fontSize: 36,
+                                  ),
                             ),
                           ),
                           Align(
@@ -83,11 +113,11 @@ class _listaEmbarqueState extends State<listaEmbarque> {
                                 'mbarques',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFF8A82E2),
-                                  fontSize: 36,
-                                  fontWeight: FontWeight.w800,
-                                ),
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF8A82E2),
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w800,
+                                    ),
                               ),
                             ),
                           ),
@@ -97,13 +127,14 @@ class _listaEmbarqueState extends State<listaEmbarque> {
                   ),
                 ],
               ),
+              
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                     child: Text(
-                      'vão, voltam e faltam',
+                      'Vão, voltam e faltam',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w300,
@@ -296,10 +327,36 @@ class _listaEmbarqueState extends State<listaEmbarque> {
                   ),
                 ),
               ),
+              Padding(
+                        padding: EdgeInsetsDirectional.fromSTEB(0, 35, 0, 0),
+                        child: ElevatedButton(
+                            child: Text(
+                              "Relatório",
+                              style: TextStyle(
+                                  fontSize: 22,
+                                  fontFamily: 'Poppins',
+                                  color: Colors.white ,
+                                  fontWeight: FontWeight.w500),
+                            ),
+                            onPressed: () {},
+                            style: ButtonStyle(
+                              
+                              backgroundColor: MaterialStateProperty.all(
+                                Color(0xFF8A82E2),
+                              ),
+                              minimumSize:
+                                  MaterialStateProperty.all(Size(120, 50)),
+                              shape: MaterialStateProperty.all(
+                                RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(10.0),
+                                    side: BorderSide(color: Color(0xFF8A82E2))),
+                              ),
+                            )),
+                      ),
             ],
-          ),
-        ),
+          ), ],
+        ), 
       ),
-    );
+    ), );
   }
 }

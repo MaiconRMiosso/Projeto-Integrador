@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class localizacaoAluno extends StatefulWidget {
-  const localizacaoAluno.dart({Key? key}) : super(key: key);
+  const localizacaoAluno({Key? key}) : super(key: key);
 
   @override
   State<localizacaoAluno> createState() => _localizacaoAlunoState();
@@ -38,8 +39,34 @@ class _localizacaoAlunoState extends State<localizacaoAluno> {
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Stack(children: <Widget>[
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        
+                            Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(200, 450, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 170,
+                                width: 170,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+                ),
+                 Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Row(
@@ -188,8 +215,9 @@ class _localizacaoAlunoState extends State<localizacaoAluno> {
               ),
             ],
           ),
+            ]
         ),
-      ),
+      ),),
     );
   }
 }

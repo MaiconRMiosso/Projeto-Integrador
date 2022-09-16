@@ -253,7 +253,7 @@ class _homeMotorista extends State<homeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w500),
                                                 ),
-                                                onPressed: () {_listaEmbarques;},
+                                                onPressed: () {_listaEmbarques();},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(

@@ -48,7 +48,7 @@ class _notificacaoAlunoState extends State<notificacaoAluno> {
                         
                             Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(200, 400, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(200, 450, 0, 0),
                             child: DottedBorder(
                               borderType: BorderType.RRect,
                               radius: Radius.circular(200),

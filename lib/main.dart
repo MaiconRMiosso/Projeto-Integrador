@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:oi/listaTransporte.dart';
 import 'package:oi/localizacaoAluno.dart';
 import 'package:oi/cadastroAluno.dart';
 import 'package:oi/cadastroDeMensagem.dart';
@@ -14,10 +15,11 @@ import 'package:oi/cadastroTransporte.dart';
 import 'package:oi/cadastroTransporte.dart';
 import 'package:oi/login.dart';
 
+
 void main() {
   runApp(MaterialApp(
 
-    home: notificacaoAluno(), //trocar aqui conforme os componentes que querem usar
+    home: listaAluno(), //trocar aqui conforme os componentes que querem usar
 
     debugShowCheckedModeBanner: false,
   ));

@@ -278,8 +278,6 @@ class _loginState extends State<login> {
                   Padding(
                         padding: EdgeInsetsDirectional.fromSTEB(120, 35, 0, 0),
                         child: ElevatedButton(
-                          
-
                             child: Text(
                               "Entrar",
                               style: TextStyle(
@@ -288,7 +286,7 @@ class _loginState extends State<login> {
                                   color: Colors.white ,
                                   fontWeight: FontWeight.w500),
                             ),
-                            onPressed: () {},
+                            onPressed: () {_abrirHomeMotorista();},
                             style: ButtonStyle(
                               
                               backgroundColor: MaterialStateProperty.all(
