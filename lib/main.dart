@@ -16,8 +16,7 @@ import 'cadastroTransporte.dart';
 
 void main() {
   runApp(MaterialApp(
-
-    home: HomeMotorista(), //trocar aqui conforme os componentes que querem usar
+    home: CadastroAluno(), //trocar aqui conforme os componentes que querem usar
 
     debugShowCheckedModeBanner: false,
   ));
