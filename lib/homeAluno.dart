@@ -2,15 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:oi/login.dart';
+import 'package:flutter_switch/flutter_switch.dart';
+import 'package:dotted_border/dotted_border.dart';
 
-class HomeAluno extends StatefulWidget {
-  const HomeAluno({Key? key}) : super(key: key);
+class homeAluno extends StatefulWidget {
+  const homeAluno({Key? key}) : super(key: key);
 
   @override
-  State<HomeAluno> createState() => _HomeAlunoState();
+  State<homeAluno> createState() => _homeAlunoState();
 }
 
-class _HomeAlunoState extends State<HomeAluno> {
+class _homeAlunoState extends State<homeAluno> {
   
   void _voltaLogin() {
   Navigator.push(
@@ -54,8 +56,34 @@ class _HomeAlunoState extends State<HomeAluno> {
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Stack(children: <Widget>[
+              Container(
+                child: Column(
+                  children: [
+                    
+                    Row(
+                      children: [
+                        Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(150, 360, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 170,
+                                width: 170,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+               Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Row(
@@ -373,9 +401,9 @@ class _HomeAlunoState extends State<HomeAluno> {
                 ),
               ),
             ],
-          ),
+          ), ]
         ),
       ),
-    );
+    ), );
   }
 }

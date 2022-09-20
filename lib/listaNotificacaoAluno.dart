@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class listaNotificacaoAluno extends StatefulWidget {
   const listaNotificacaoAluno({Key? key}) : super(key: key);
@@ -28,27 +29,61 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
   }
 
   @override
-  Widget build(BuildContext context) {
+   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        centerTitle: true,
+        elevation: 0,
+        backgroundColor: Color(0xFFEEF0F6),
         leading: IconButton(
           onPressed: () {},
           icon: Icon(
-            Icons.arrow_back,
+            Icons.arrow_circle_left,
+            color: Color(0xFF707585),
           ),
         ),
         actions: [
           IconButton(
             onPressed: () {},
             icon: Icon(Icons.logout),
+            color: Color(0xFF707585),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: Icon(Icons.notifications),
+            color: Color(0xFF707585),
           ),
         ],
       ),
       body: SafeArea(
         child: GestureDetector(
-          onTap: () => FocusScope.of(context).unfocus(),
-          child: Column(
+            onTap: () => FocusScope.of(context).unfocus(),
+            child: Stack(children: <Widget>[
+              Container(
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        
+                            Padding(
+                            padding:
+                                EdgeInsetsDirectional.fromSTEB(200, 450, 0, 0),
+                            child: DottedBorder(
+                              borderType: BorderType.RRect,
+                              radius: Radius.circular(200),
+                              padding: EdgeInsets.all(6),
+                              color: Color(0xFF8A82E2),
+                              child: Container(
+                                height: 170,
+                                width: 170,
+                                color: Colors.transparent,
+                              ),
+                            )),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+          Column(
             mainAxisSize: MainAxisSize.max,
             children: [
               Row(
@@ -64,14 +99,14 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
                         children: [
                           Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                             child: Text(
                               'N',
                               style: TextStyle(
-                                fontFamily: 'Poppins',
-                                color: Color(0xFF707585),
-                                fontSize: 36,
-                              ),
+                                    fontFamily: 'Poppins',
+                                    color: Color(0xFF707585),
+                                    fontSize: 36,
+                                  ),
                             ),
                           ),
                           Align(
@@ -83,11 +118,11 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
                                 'otificações',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
-                                  fontFamily: 'Poppins',
-                                  color: Color(0xFF8A82E2),
-                                  fontSize: 36,
-                                  fontWeight: FontWeight.w800,
-                                ),
+                                      fontFamily: 'Poppins',
+                                      color: Color(0xFF8A82E2),
+                                      fontSize: 36,
+                                      fontWeight: FontWeight.w800,
+                                    ),
                               ),
                             ),
                           ),
@@ -97,11 +132,12 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
                   ),
                 ],
               ),
+              
               Row(
                 mainAxisSize: MainAxisSize.max,
                 children: [
                   Padding(
-                    padding: EdgeInsetsDirectional.fromSTEB(20, 0, 0, 0),
+                    padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                     child: Text(
                       'fique ligado',
                       style: TextStyle(
@@ -298,7 +334,9 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
               ),
             ],
           ),
+            ],
         ),
+      ),
       ),
     );
   }

@@ -1,14 +1,18 @@
+import 'package:flutter/src/foundation/key.dart';
+import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
 
-class listaAluno extends StatefulWidget {
-  const listaAluno({Key? key}) : super(key: key);
+
+class listaTransporte extends StatefulWidget {
+  const listaTransporte({Key? key}) : super(key: key);
 
   @override
-  State<listaAluno> createState() => _listaAlunoState();
+  State<listaTransporte> createState() => _listaTransporteState();
 }
 
-class _listaAlunoState extends State<listaAluno> {
+
+class _listaTransporteState extends State<listaTransporte> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
@@ -101,7 +105,7 @@ class _listaAlunoState extends State<listaAluno> {
                             padding:
                                 EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                             child: Text(
-                              'A',
+                              'T',
                               style: TextStyle(
                                     fontFamily: 'Poppins',
                                     color: Color(0xFF707585),
@@ -115,7 +119,7 @@ class _listaAlunoState extends State<listaAluno> {
                               padding:
                                   EdgeInsetsDirectional.fromSTEB(0, 0, 55, 0),
                               child: Text(
-                                'lunos',
+                                'ransporte',
                                 textAlign: TextAlign.start,
                                 style: TextStyle(
                                       fontFamily: 'Poppins',
@@ -139,7 +143,7 @@ class _listaAlunoState extends State<listaAluno> {
                   Padding(
                     padding: EdgeInsetsDirectional.fromSTEB(30, 0, 0, 0),
                     child: Text(
-                      'quem você transporta',
+                      'o que você dirige',
                       style: TextStyle(
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w300,
@@ -235,7 +239,7 @@ class _listaAlunoState extends State<listaAluno> {
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 ),
-                                                onPressed: () {print("Apertei"); Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));},
+                                                onPressed: () {},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(
