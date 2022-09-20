@@ -57,6 +57,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "1.0.5"
+  datetime_picker_formfield:
+    dependency: "direct main"
+    description:
+      name: datetime_picker_formfield
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "2.0.1"
   dotted_border:
     dependency: "direct main"
     description:
@@ -90,6 +97,13 @@ packages:
     description: flutter
     source: sdk
     version: "0.0.0"
+  flutter_inset_box_shadow:
+    dependency: "direct main"
+    description:
+      name: flutter_inset_box_shadow
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "1.0.8"
   flutter_switch:
     dependency: "direct main"
     description:
@@ -123,6 +137,13 @@ packages:
       url: "https://pub.dartlang.org"
     source: hosted
     version: "4.0.1"
+  intl:
+    dependency: transitive
+    description:
+      name: intl
+      url: "https://pub.dartlang.org"
+    source: hosted
+    version: "0.17.0"
   matcher:
     dependency: transitive
     description:

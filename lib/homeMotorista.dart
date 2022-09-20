@@ -94,7 +94,7 @@ class _homeMotorista extends State<homeMotorista> {
                       children: [
                         Padding(
                             padding:
-                                EdgeInsetsDirectional.fromSTEB(10, 200, 0, 0),
+                                EdgeInsetsDirectional.fromSTEB(10, 220, 0, 0),
                             child: DottedBorder(
                               borderType: BorderType.RRect,
                               radius: Radius.circular(200),
@@ -436,7 +436,6 @@ class _homeMotorista extends State<homeMotorista> {
                                               borderRadius:
                                                   BorderRadius.circular(20),
                                             ),
-
                                             child: IconButton(
                                               onPressed: () {},
                                               icon: Icon(Icons.rotate_left),
