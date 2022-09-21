@@ -6,14 +6,14 @@ import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:intl/intl.dart';
 
-class CadastroAluno extends StatefulWidget {
-  const CadastroAluno({Key? key}) : super(key: key);
+class cadastroAluno extends StatefulWidget {
+  const cadastroAluno({Key? key}) : super(key: key);
 
   @override
-  State<CadastroAluno> createState() => _CadastroAlunoState();
+  State<cadastroAluno> createState() => _cadastroAlunoState();
 }
 
-class _CadastroAlunoState extends State<CadastroAluno> {
+class _cadastroAlunoState extends State<cadastroAluno> {
   TextEditingController? textController1;
   TextEditingController? textController2;
   TextEditingController? textController3;
