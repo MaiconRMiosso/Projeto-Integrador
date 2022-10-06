@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:oi/cadastroAluno.dart';
 
 class listaAluno extends StatefulWidget {
   const listaAluno({Key? key}) : super(key: key);
@@ -27,6 +28,11 @@ class _listaAlunoState extends State<listaAluno> {
     textController5 = TextEditingController();
     textController6 = TextEditingController();
   }
+
+  void _cadastroAluno() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> CadastroAluno()));
+}
 
   @override
      Widget build(BuildContext context) {
@@ -525,7 +531,7 @@ Padding(
                                             ),
 
                                             child: IconButton(
-                                              onPressed: () {},
+                                              onPressed: () {_cadastroAluno();},
                                               icon: Icon(Icons.add),
                                               color: Colors.white,
                                               iconSize: 40,

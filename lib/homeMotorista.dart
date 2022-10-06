@@ -3,8 +3,11 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:oi/cadastrodemensagem.dart';
 import 'package:oi/listaAluno.dart';
 import 'package:oi/listaEmbarque.dart';
+import 'package:oi/listaNotificacaoAluno.dart';
+import 'package:oi/listaTransporte.dart';
 
 class homeMotorista extends StatefulWidget {
   const homeMotorista({Key? key}) : super(key: key);
@@ -21,6 +24,14 @@ class _homeMotorista extends State<homeMotorista> {
 
   void _listaEmbarques() {
   Navigator.push(context, MaterialPageRoute(builder: (context)=> listaEmbarque()));
+}
+
+  void _listaTransporte() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> listaTransporte()));
+}
+
+  void _cadastroDeMensagem() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> cadastroDeMensagem()));
 }
 
   @override
@@ -285,7 +296,7 @@ class _homeMotorista extends State<homeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 ),
-                                                onPressed: () {print("Apertei"); Navigator.push(context, MaterialPageRoute(builder: (context)=> listaAluno()));},
+                                                onPressed: () {_listaAluno();},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(
@@ -315,7 +326,7 @@ class _homeMotorista extends State<homeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {_listaTransporte();},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(
@@ -345,7 +356,7 @@ class _homeMotorista extends State<homeMotorista> {
                                                       fontWeight:
                                                           FontWeight.w300),
                                                 ),
-                                                onPressed: () {},
+                                                onPressed: () {_cadastroDeMensagem();},
                                                 style: ButtonStyle(
                                                   elevation:
                                                       MaterialStateProperty.all(

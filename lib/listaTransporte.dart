@@ -2,6 +2,7 @@ import 'package:flutter/src/foundation/key.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/material.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:oi/cadastroTransporte.dart';
 
 
 class listaTransporte extends StatefulWidget {
@@ -31,6 +32,11 @@ class _listaTransporteState extends State<listaTransporte> {
     textController5 = TextEditingController();
     textController6 = TextEditingController();
   }
+
+  void _cadastraTransporte() {
+  Navigator.push(context, MaterialPageRoute(builder: (context)=> cadastroTrasporte()));
+}
+  
 
   @override
      Widget build(BuildContext context) {
@@ -529,7 +535,7 @@ Padding(
                                             ),
 
                                             child: IconButton(
-                                              onPressed: () {},
+                                              onPressed: () {_cadastraTransporte();},
                                               icon: Icon(Icons.add),
                                               color: Colors.white,
                                               iconSize: 40,

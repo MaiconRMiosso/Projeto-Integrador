@@ -5,6 +5,10 @@ import 'package:flutter/material.dart' hide BoxDecoration, BoxShadow;
 import 'package:flutter_inset_box_shadow/flutter_inset_box_shadow.dart';
 import 'package:datetime_picker_formfield/datetime_picker_formfield.dart';
 import 'package:intl/intl.dart';
+import 'package:oi/homeMotorista.dart';
+import 'package:oi/listaAluno.dart';
+import 'package:oi/listaTransporte.dart';
+
 
 class cadastroAluno extends StatefulWidget {
   const cadastroAluno({Key? key}) : super(key: key);
@@ -32,6 +36,26 @@ class _cadastroAlunoState extends State<cadastroAluno> {
     textController5 = TextEditingController();
     textController6 = TextEditingController();
   }
+
+    void _abrirListaAluno() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> listaAluno()));
+}
+
+    void _abrirListaTransporte() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> listaTransporte()));
+}
+
+    void _abrirCadastraAviso() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> homeMotorista()));
+}
+
+    void _abrirHomeMotorista() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> homeMotorista()));
+}
 
   @override
   Widget build(BuildContext context) {
@@ -66,7 +90,7 @@ class _cadastroAlunoState extends State<cadastroAluno> {
               gradient: null,
             ),
             child: IconButton(
-              onPressed: () {},
+              onPressed: () {_abrirHomeMotorista();},
               icon: Icon(Icons.arrow_back),
               color: Color(0xFF707585),
               iconSize: 20,
@@ -335,7 +359,7 @@ class _cadastroAlunoState extends State<cadastroAluno> {
                                                         fontWeight:
                                                             FontWeight.w500),
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () {_abrirListaAluno();},
                                                   style: ButtonStyle(
                                                     elevation:
                                                         MaterialStateProperty
@@ -368,7 +392,7 @@ class _cadastroAlunoState extends State<cadastroAluno> {
                                                         fontWeight:
                                                             FontWeight.w300),
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () {_abrirListaTransporte();},
                                                   style: ButtonStyle(
                                                     elevation:
                                                         MaterialStateProperty
@@ -398,7 +422,7 @@ class _cadastroAlunoState extends State<cadastroAluno> {
                                                         fontWeight:
                                                             FontWeight.w300),
                                                   ),
-                                                  onPressed: () {},
+                                                  onPressed: () {_abrirCadastraAviso();},
                                                   style: ButtonStyle(
                                                     elevation:
                                                         MaterialStateProperty

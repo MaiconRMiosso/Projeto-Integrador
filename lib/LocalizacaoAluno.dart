@@ -1,6 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:oi/homeAluno.dart';
+import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
+import 'package:flutter/services.dart';
+import 'package:oi/localizacaoAluno.dart';
+import 'package:oi/login.dart';
+import 'package:flutter_switch/flutter_switch.dart';
+import 'package:dotted_border/dotted_border.dart';
 
 class localizacaoAluno extends StatefulWidget {
   const localizacaoAluno({Key? key}) : super(key: key);
@@ -8,6 +16,7 @@ class localizacaoAluno extends StatefulWidget {
   @override
   State<localizacaoAluno> createState() => _localizacaoAlunoState();
 }
+
 
 class _localizacaoAlunoState extends State<localizacaoAluno> {
   @override

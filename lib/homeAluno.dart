@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:flutter/services.dart';
+import 'package:oi/listaNotificacaoAluno.dart';
+import 'package:oi/localizacaoAluno.dart';
 import 'package:oi/login.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
@@ -18,7 +20,15 @@ class _homeAlunoState extends State<homeAluno> {
   Navigator.push(
     context, MaterialPageRoute(builder: (context)=> login()));
 }
+  void _localizacaoAluno() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> localizacaoAluno()));
+}
 
+  void _listaAviso() {
+  Navigator.push(
+    context, MaterialPageRoute(builder: (context)=> listaNotificacaoAluno()));
+}
   
   @override
   Widget build(BuildContext context) {
@@ -43,12 +53,12 @@ class _homeAlunoState extends State<homeAluno> {
         ),
         actions: [
           IconButton(
-            onPressed: () {_voltaLogin;},
+            onPressed: () {_voltaLogin();},
             icon: Icon(Icons.logout),
             color: Color(0xFF707585),
           ),
           IconButton(
-            onPressed: () {},
+            onPressed: () {_listaAviso();},
             icon: Icon(Icons.notifications),
             color: Color(0xFF707585),
           ),
@@ -200,7 +210,7 @@ class _homeAlunoState extends State<homeAluno> {
                                   FlatButton(
                                     textColor: Colors.white,
                                     child: Text("GPS"),
-                                    onPressed: () {},
+                                    onPressed: () {_localizacaoAluno();},
                                   ),
                                 ],
                               ),
