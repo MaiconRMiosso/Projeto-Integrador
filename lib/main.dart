@@ -18,7 +18,9 @@ import 'package:oi/login.dart';
 void main() {
   runApp(MaterialApp(
 
+
      home: CadastroAluno(), //trocar aqui conforme os componentes que querem usar
+
 
     debugShowCheckedModeBanner: false,
   ));
