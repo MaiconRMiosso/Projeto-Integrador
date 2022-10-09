@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:oi/homeAluno.dart';
 import 'package:oi/homeMotorista.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class login extends StatefulWidget {
   const login({Key? key}) : super(key: key);
@@ -12,17 +13,51 @@ class login extends StatefulWidget {
 
 class _loginState extends State<login> {
   @override
-  TextEditingController? textController1;
-  TextEditingController? textController2;
-  final scaffoldKey = GlobalKey<ScaffoldState>();
+  TextEditingController _controllerEmail = TextEditingController();
+  TextEditingController _controllerSenha = TextEditingController();
+  
+  final scaffoldKey = GlobalKey<ScaffoldState>(); //nao tem no do professor
+
+  _validaCampo() {
+    String email = _controllerEmail.text;
+    String senha = _controllerSenha.text;
+
+    if (email.isNotEmpty && email.contains("@")) {
+      if (senha.isNotEmpty && senha.length >= 6) {
+        FirebaseAuth auth = FirebaseAuth.instance;
+        auth
+            .signInWithEmailAndPassword(email: email, password: senha)
+            .then((value) => {
+                  print("${value.toString()}"),
+                  Navigator.pushAndRemoveUntil(
+                      context,
+                      MaterialPageRoute(builder: (context) => const homeAluno()),
+                      (route) => false)
+                });
+      }
+    }
+  }
+
+  _verificaUsuarioLogado() {
+    User? usuarioLogado = FirebaseAuth.instance.currentUser;
+    if (usuarioLogado != null) {
+      setState(() {
+        /*Navigator.push(
+            context, MaterialPageRoute(builder: (context) => Home()));*/
+        Navigator.pushAndRemoveUntil(
+            context,
+            MaterialPageRoute(builder: (context) => const homeAluno()),
+            (route) => false);
+      });
+    }
+  }
 
   @override
   void initState() {
+    // TODO: implement initState
     super.initState();
-    textController1 = TextEditingController();
-    textController2 = TextEditingController();
+    _verificaUsuarioLogado();
   }
-
 
   void _abrirHomeAluno() {
   Navigator.push(
@@ -33,7 +68,6 @@ class _loginState extends State<login> {
   Navigator.push(
     context, MaterialPageRoute(builder: (context)=> homeMotorista()));
 }
-
 
   Widget build(BuildContext context) {
     return Scaffold(
@@ -195,7 +229,7 @@ class _loginState extends State<login> {
                                   Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 30, 20, 0),
                 child: TextFormField(
-                  controller: textController1,
+                  controller: _controllerEmail,
                   autofocus: true,
                   obscureText: false,
                   decoration: InputDecoration(
@@ -225,7 +259,7 @@ class _loginState extends State<login> {
  Padding(
                 padding: EdgeInsetsDirectional.fromSTEB(20, 35, 20, 0),
                 child: TextFormField(
-                  controller: textController2,
+                  controller: _controllerSenha,
                   autofocus: true,
                   obscureText: false,
                   decoration: InputDecoration(
@@ -286,7 +320,7 @@ class _loginState extends State<login> {
                                   color: Colors.white ,
                                   fontWeight: FontWeight.w500),
                             ),
-                            onPressed: () {_abrirHomeMotorista();},
+                            onPressed: () {_validaCampo();},
                             style: ButtonStyle(
                               
                               backgroundColor: MaterialStateProperty.all(

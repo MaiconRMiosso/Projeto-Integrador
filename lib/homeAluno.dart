@@ -6,6 +6,7 @@ import 'package:oi/localizacaoAluno.dart';
 import 'package:oi/login.dart';
 import 'package:flutter_switch/flutter_switch.dart';
 import 'package:dotted_border/dotted_border.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 
 class homeAluno extends StatefulWidget {
   const homeAluno({Key? key}) : super(key: key);
@@ -16,10 +17,7 @@ class homeAluno extends StatefulWidget {
 
 class _homeAlunoState extends State<homeAluno> {
   
-  void _voltaLogin() {
-  Navigator.push(
-    context, MaterialPageRoute(builder: (context)=> login()));
-}
+
   void _localizacaoAluno() {
   Navigator.push(
     context, MaterialPageRoute(builder: (context)=> localizacaoAluno()));
@@ -29,6 +27,18 @@ class _homeAlunoState extends State<homeAluno> {
   Navigator.push(
     context, MaterialPageRoute(builder: (context)=> listaNotificacaoAluno()));
 }
+
+_deslogar() async {
+    FirebaseAuth auth = FirebaseAuth.instance;
+    auth.signOut();
+    setState(() {
+      Navigator.pushAndRemoveUntil(
+          context,
+          MaterialPageRoute(builder: (context) => const login()),
+          (route) => false);
+    });
+  }
+
   
   @override
   Widget build(BuildContext context) {
@@ -53,7 +63,7 @@ class _homeAlunoState extends State<homeAluno> {
         ),
         actions: [
           IconButton(
-            onPressed: () {_voltaLogin();},
+            onPressed: () {_deslogar();},
             icon: Icon(Icons.logout),
             color: Color(0xFF707585),
           ),
