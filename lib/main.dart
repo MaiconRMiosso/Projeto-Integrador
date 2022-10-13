@@ -19,9 +19,12 @@ void main() {
   runApp(MaterialApp(
 
 
-     home: CadastroAluno(), //trocar aqui conforme os componentes que querem usar
+     home: login(), //trocar aqui conforme os componentes que querem usar
 
 
     debugShowCheckedModeBanner: false,
   ));
 }
+
+
+

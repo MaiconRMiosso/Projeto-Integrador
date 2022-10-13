@@ -39,6 +39,9 @@ dependencies:
   dotted_border: ^2.0.0+2
   flutter_inset_box_shadow: ^1.0.7
   datetime_picker_formfield: ^2.0.1
+  firebase_core: ^1.24.0
+  firebase_auth: ^3.9.0
+  firebase_database: ^9.1.4
   
 dev_dependencies:
   flutter_test:
@@ -50,7 +53,11 @@ dev_dependencies:
   # package. See that file for information about deactivating specific lint
   # rules and activating additional ones.
   # flutter_lints: ^2.0.0
+  # firebase_storage: ^10.3.8
 
+  #image Picker
+  image_picker: ^0.8.6
+  
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
 
@@ -92,3 +99,4 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+
