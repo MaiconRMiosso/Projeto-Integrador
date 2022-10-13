@@ -341,3 +341,4 @@ class _listaNotificacaoAlunoState extends State<listaNotificacaoAluno> {
     );
   }
 }
+

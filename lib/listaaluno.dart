@@ -31,7 +31,7 @@ class _listaAlunoState extends State<listaAluno> {
 
   void _cadastroAluno() {
   Navigator.push(
-    context, MaterialPageRoute(builder: (context)=> CadastroAluno()));
+    context, MaterialPageRoute(builder: (context)=> cadastroAluno()));
 }
 
   @override
@@ -549,3 +549,4 @@ Padding(
       
   }
 }
+
